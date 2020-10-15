@@ -5,7 +5,6 @@ import com.Repository.TextRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.awt.*;
 
 @Component
 public class TextResourceImpl extends TextResource {
