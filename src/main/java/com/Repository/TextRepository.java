@@ -13,15 +13,28 @@ public class TextRepository {
     private HashOperations hashOperations;
     private RedisTemplate redisTemplate;
 
+    /**
+     *
+     * @param redisTemplate
+     */
     public TextRepository(RedisTemplate redisTemplate){
         this.hashOperations=redisTemplate.opsForHash();
         this.redisTemplate = redisTemplate;
     }
 
+    /**
+     *
+     * @param text
+     */
     public void saveText(TextModel text){
         hashOperations.put("TEXT",text.getId(),text);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public TextModel findbyId(String id){
         return (TextModel) hashOperations.get("TEXT",id);
     }

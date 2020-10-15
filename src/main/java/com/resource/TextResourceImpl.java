@@ -17,6 +17,11 @@ public class TextResourceImpl extends TextResource {
     @Autowired
     private TextRepository textRepository ;
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @Override
     public String getText(String id) {
         TextModel text = null;
@@ -27,6 +32,12 @@ public class TextResourceImpl extends TextResource {
         return text.toString();
         }
 
+    /**
+     *
+     * @param id
+     * @param text
+     * @return
+     */
     public String saveText(String id , String text){
         textModel.setId(id);
         textModel.setText(text);

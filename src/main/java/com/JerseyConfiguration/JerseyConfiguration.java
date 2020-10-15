@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import javax.ws.rs.ApplicationPath;
 
+/**
+ * This is Jersey Configuration , Add the resource classes here
+ */
 @Component
 @ApplicationPath("/")
 public class JerseyConfiguration extends ResourceConfig {
